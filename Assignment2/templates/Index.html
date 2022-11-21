@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <<title>CRUD Operation</title>
+</head>
+<body>
+    <center>
+        <h1> How To Create CRUD Operation</h1>
+        <h3>Django Web Tutorials</h3>
+        <hr/>
+        <a href="{% url 'Insertuser' %}">Create New User</a>
+        <table border="1">
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Salary</th>
+                <th>Phone</th>
+                <th>Country Name</th>
+            </tr>
+
+            {% for result in data %}
+            <tr>
+                <td>{{result.email}}</td>
+                <td>{{result.name}}</td>
+                <td>{{result.surname}}</td>
+                <td>{{result.salary}}</td>
+                <td>{{result.phone}}</td>
+                <td>{{result.cname}}</td>
+                <td><a href="Edit/<{{result.email}}>">Edit</a></td>
+                <td><a href="#">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

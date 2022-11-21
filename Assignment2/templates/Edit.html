@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <<title>CRUD Operation</title>
+</head>
+<body>
+    <center>
+        <h1> Edit </h1>
+        <h3>Django Web Tutorials</h3>
+        <hr/>
+
+        <table border="1">
+        <tr>
+            <td>User Email</td>
+            <td><input type="text" name="email" value = "{{UserModel.email}}" readonly></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" value = "{{UserModel.name}}"></td>
+        </tr>
+        <tr>
+            <td>Surname</td>
+            <td><input type="text" name="surname" value = "{{UserModel.surname}}"></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input type="text" name="salary" value = "{{UserModel.salary}}"></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type="text" name="phone" value = "{{UserModel.phone}}"></td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td><input type="text" name="country" value = "{{UserModel.country}}"></td>
+        </tr>
+        </table>
+        <a href="{% url 'showuser' %}">Home Page</a>
+    </center>
+</body>
+</html>

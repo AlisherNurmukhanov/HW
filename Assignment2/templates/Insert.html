@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <<title>CRUD Operation</title>
+</head>
+<body>
+    <center>
+        <h1> Insert Record</h1>
+        <h3>Django Web Tutorials</h3>
+        <hr/>
+        <form method="POST">
+            {% csrf_token %}
+        <table border="1">
+            <tr>
+                <td>User Email</td>
+                <td><input type="text" placeholder="Enter Email"  name="email"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" placeholder="Enter Name"  name="name"></td>
+            </tr>
+            <tr>
+                <td>Surname</td>
+                <td><input type="text" placeholder="Enter Surname"  name="surname"></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type="text" placeholder="Enter Salary"  name="salary"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" placeholder="Enter Phone"  name="phone"></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><select name = "cname" >
+                    <option selected disabled=true>-- Select Country --</option>
+                    <option>Canada</option>
+                    <option>China</option>
+                    <option>France</option>
+                    <option>Germany</option>
+                    <option>India</option>
+                    <option>Japan</option>
+                    <option>Kazakhstan</option>
+                    <option>Russia</option>
+                    <option>Spain</option>
+                    <option>Sweden</option>
+
+                  </select>
+                      </td>
+            </tr>
+            <tr>
+                <td><input type = "submit" value="Insert"/><
+                <td>{% if messages %}
+                    {% for mess in messages %}
+                    <b style="color: green;">{{mess}} </b>
+                    {% endfor %}
+                    {% endif %}</td>
+            </tr>
+
+        </table>
+    <a href="{% url 'showuser' %}">Home Page</a>
+    </form>
+    </center>
+</body>
+</html>
